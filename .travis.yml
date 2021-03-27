@@ -4,5 +4,12 @@ language: java
 jdk:
     - openjdk11
 
+addons: 
+    sonarcloud: 
+        organization: ilcontecvma
+        token: 
+            0ae84f6ace1096d12805cdfadf5ca1bada54fd9f
+
 script: 
-    - mvn test -B
+    
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=IlConteCvma_MavenTravis

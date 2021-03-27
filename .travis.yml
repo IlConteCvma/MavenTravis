@@ -4,4 +4,5 @@ language: java
 jdk:
     - openjdk11
 
-mvn test -B
+script: 
+    - mvn test -B
